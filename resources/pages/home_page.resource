@@ -20,7 +20,8 @@ ${home_pass}   admin123
 *** Keywords ***
 Open Browser To Login Page
     New Browser                browser=${BROWSER}    headless=${HEADLESS}
-    #New Context    viewport = {'width': 1280, 'height': 800}
+    New Context                viewport={'width': 1280, 'height': 800}
+    
     New Page                   url=${BASE_URL}
     Wait For Elements State    ${lbl_login}
 
